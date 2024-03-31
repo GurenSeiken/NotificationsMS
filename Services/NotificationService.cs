@@ -17,7 +17,7 @@ namespace NotificationsMS.Services
 
         public List<InfoNotification> Get() {
         
-            return _infoNotifications.Find(d=>true).ToList();
+            return _infoNotifications.Find(d => d.Title !=null).ToList();
         }
         public InfoNotification Create(InfoNotification infoNotification)
         {
